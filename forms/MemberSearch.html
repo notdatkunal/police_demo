@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Search Form</title>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333333;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('arrow-down.png') no-repeat right;
+        }
+
+        input[type="submit"] {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555555;
+        }
+        .card {
+            background-color: #f4f3f806;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .visitor-search {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Additional Styling */
+        .card label {
+            font-size: 18px;
+            color: #444;
+        }
+
+        .card input[type="text"],
+        .card input[type="tel"],
+        .card input[type="email"],
+        .card select {
+            font-size: 14px;
+        }
+
+        .card input[type="submit"] {
+            background-color: #1659be;
+            transition: background-color 0.3s;
+        }
+
+        .card input[type="submit"]:hover {
+            background-color: #0c4cd6;
+        }
+
+        .card select {
+            background: url('arrow-down.png') no-repeat right #f5f5f5;
+            background-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Member Search</h1>
+      
+        <div class="card">
+           
+            <form action="#" method="post">
+                <div class="form-section">
+                    <h2>Search By Location</h2>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter Pincode" required>
+                    <input type="submit" value="Submit">
+                    
+            
+                </div>
+            </form>
+        </div>
+       
+        <div class="card">
+           
+            <form action="#" method="post">
+
+                <div class="form-section">
+                    <h2>Search By Email </h2> 
+                    <input type="text" id="email" name="email" placeholder="Enter Email ID">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

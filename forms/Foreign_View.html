@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foreign Visitor</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #F8F9FA;
+        }
+        .h1 {
+            background-color: #007BFF;
+            padding: 10px;
+            color: #FBFCFE;
+        }
+        .container {
+            background-color: #BEB7B7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(121, 119, 119, 0.1);
+            opacity: 0;
+            animation: fade-in 1s forwards;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 50px;
+        }
+        .container:hover {
+            background-color: #B7B4B4;
+            transform: scale(1.02);
+        }
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+        .table {
+            background-color: #fff;
+        }
+        .table thead th {
+            background-color: #007BFF; /* Dark gray background color for headers */
+            color: #fff;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .vl {
+            height: 500px;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            top: 120px;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center" class="h1">Foreign Visitor</h1>
+<div class="container">
+    <form>
+        <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Search...">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+    <table class="table">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Name Of Visitor</th>
+                <th scope="col">Country</th>
+                <th scope="col">Passport No.</th>
+                <th scope="col">Visa date</th>
+                <th scope="col">Purpose Of Stay</th>
+                <th scope="col">Mode Of Stay</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10/08/23</td>
+                <td>xyz</td>
+                <td>India</td>
+                <td><a href="#" data-toggle="modal" data-target="#photoModal" data-photo="path/to/passport/photo.jpg">123456****</a></td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <span class="font-weight-bold">Issuance:</span>
+                        <span>01/01/2023</span>
+                        <span class="font-weight-bold">Expiration:</span>
+                        <span>01/01/2024</span>
+                    </div>
+                </td>
+                <td>Tourist</td>
+                <td>Hotel</td>
+            </tr>
+            <tr>
+                <td>10/08/23</td>
+                <td>xyz</td>
+                <td>India</td>
+                <td><a href="#" data-toggle="modal" data-target="#photoModal" data-photo="path/to/passport/photo.jpg">123456****</a></td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <span class="font-weight-bold">Issuance:</span>
+                        <span>01/01/2023</span>
+                        <span class="font-weight-bold">Expiration:</span>
+                        <span>01/01/2024</span>
+                    </div>
+                </td>
+                <td>Tourist</td>
+                <td>Hotel</td>
+            </tr>
+            <!-- Add more rows here if needed -->
+        </tbody>
+    </table>
+</div>
+<!-- Modal for Passport Photo -->
+<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="photoModalLabel">Passport Photo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="Passport Photo" id="passportPhoto" style="max-width: 100%;">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

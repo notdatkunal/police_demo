@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Notice</title>
+    <link rel="shortcut icon" href="C:\Users\kkS\Desktop\cvirms_web">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .l1 {
+            font-weight: bolder;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .main {
+            width: 50%;
+            font-weight: bolder;
+        }
+
+        .f1 {
+            margin-bottom: 5px;
+            /* Adjust the margin as needed */
+        }
+
+        .c1 {
+            width: 50%;
+        }
+
+        header {
+            background-color: #0076ff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            margin-top: 20px;
+
+        }
+
+        form {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Add Notice</h1>
+    </header>
+    <div class="container">
+        <form id="employeeForm">
+            <div class="form-row" class="l1">
+                <div class="col-md-2 form-group">
+                    <label class="l1">Title:</label>
+                    <input type="Tit" id="Title" name="Title"><br>
+                </div>
+              
+            </div>
+
+
+          
+                 
+        <div class="form-group">
+            <label for="Description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea><br>
+          </div>
+  
+          <div>
+          <label for="uploadPhoto"> Upload Notice Document :</label>
+          <input type="file" id="uploadPhoto" name="uploadPhoto" accept="image/*"><br><br>
+        </div>
+  
+          <div class="col-md-10">
+            <label for="startDate">Notice Valid Upto:</label>
+            <input type="datetime-local" id="Date"  name="Date" class="form-control"><br>
+        </div>
+               
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+               
+               
+               
+
+
+
+              
+
+
+
+
+               
+
+           
+
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

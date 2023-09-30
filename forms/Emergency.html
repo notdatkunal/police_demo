@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../images/cvirms_logo.png">
+    <link rel="shortcut icon" href="images/cvirms_logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Table Example</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .f1 {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h2 class="display-400 bg-primary">Emergency Table</h2>
+  </center>
+  <div class="container mt-5">
+    <form class="f1">
+      <fieldset>
+        <div class="form-group">
+          <label for="emergencyType">Type of Emergency:</label>
+          <select class="form-control" id="emergencyType" name="emergencyType" required>
+            <option value="" disabled selected>Select an emergency type</option>
+            <option value="fire">Fire</option>
+            <option value="medical">Medical</option>
+            <option value="accident">Accident</option>
+            <option value="naturalDisaster">Natural Disaster</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="emergencyName">Name of Emergency:</label>
+          <input type="text" class="form-control" id="emergencyName" name="emergencyName" required>
+        </div>
+        <div class="form-group">
+          <label for="emergencyDate">Date:</label>
+          <input type="date" class="form-control" id="emergencyDate" name="emergencyDate" required>
+        </div>
+        <div class="form-group">
+          <label for="emergencyRemark">Remark:</label>
+          <textarea class="form-control" id="emergencyRemark" name="emergencyRemark" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-check-label" for="termsAndConditions">
+            <input type="checkbox" class="form-check-input" id="termsAndConditions" required>
+           <b>Terms & Conditions</b><br>
+           <p>I understand that i am sending this emergency alert to the police station. I am aware that i am fully responsible for the legal consequiences for this action. </p>
+          </label>
+        </div>
+        
+          <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
+  
+<div class="container mt-5">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Sr no.</th>
+        <th scope="col">Message</th>
+        <th scope="col">Date</th>
+        <th scope="col">Remark</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.</td>
+        <td>Earthquake</td>
+        <td>2023-08-18</td>
+        <td>Impact on local infrastructure</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Heart Attack</td>
+        <td>2023-08-20</td>
+        <td>Urgent medical attention required</td>
+        <td>Verified</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Tsunami</td>
+        <td>2023-12-30</td>
+        <td>Urgent medical attention required</td>
+        <td>Waiting</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Include Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+ 
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hostel</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+       
+        body {
+            background-color: #fbfcfe;
+        }
+
+        .container {
+            background-color: #c7c2c2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(121, 119, 119, 0.1);
+            opacity: 0;
+            animation: fade-in 1s forwards;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .container:hover {
+            background-color: #b7b4b4; /* Change background color on hover */
+            transform: scale(1.02); /* Slightly scale up on hover */
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .breadcrumbs {
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs h5 {
+            margin: 0;
+            color: #f3eded;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .table {
+            background-color: #c8c5c5;
+        }
+
+        .table thead th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .table tbody td {
+            vertical-align: middle;
+        }
+
+        .h1 {
+            background-color: #007bff;
+            padding: 10px;
+            color: #fbfcfe;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center" class="h1">Hostel</h1>
+<div class="container mt-5">
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form class="mb-3">
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search...">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+
+    <table class="table table-bordered">
+        <thead class="bg-success">
+            <tr>
+                <th scope="col">Sr. no.</th>
+                <th scope="col">Name of visitors</th> 
+                <th scope="col">Contact No</th>  
+                <th scope="col">No of guest</th>
+                <th scope="col">Vehicle No</th>
+                <th scope="col">Type</th>
+                <th scope="col">Organization</th>
+                <th scope="col">Check In</th>
+                <th scope="col">Check out</th>
+                <th scope="col">Ref 1</th>
+                <th scope="col">Ref 2</th>
+                <th scope="col">Remark</th>
+                <th scope="col">Flagged</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">1</td>
+                <td>abcd</td>
+                <td>7625120587</td>
+                <td>4</td>
+                <td>fgh234561</td>      
+                <td>student</td>
+                <td>sales</td>        
+                <td>6 AM</td>
+                <td>12 PM</td>
+                <td>acd</td>
+                <td>sdf</td>
+                <td>dfg</td>
+                <td>sd</td>
+            </tr>
+            <tr>
+                <td scope="row">1</td>
+                <td>abcd</td>
+                <td>7625120587</td>
+                <td>4</td>
+                <td>fgh234561</td>      
+                <td>student</td>
+                <td>sales</td>        
+                <td>6 AM</td>
+                <td>12 PM</td>
+                <td>acd</td>
+                <td>sdf</td>
+                <td>dfg</td>
+                <td>sd</td>
+            </tr>
+            <tr>
+                <td scope="row">1</td>
+                <td>abcd</td>
+                <td>7625120587</td>
+                <td>4</td>
+                <td>fgh234561</td>      
+                <td>student</td>
+                <td>sales</td>        
+                <td>6 AM</td>
+                <td>12 PM</td>
+                <td>acd</td>
+                <td>sdf</td>
+                <td>dfg</td>
+                <td>sd</td>
+            </tr>
+            <tr>
+                <td scope="row">1</td>
+                <td>abcd</td>
+                <td>7625120587</td>
+                <td>4</td>
+                <td>fgh234561</td>      
+                <td>student</td>
+                <td>sales</td>        
+                <td>6 AM</td>
+                <td>12 PM</td>
+                <td>acd</td>
+                <td>sdf</td>
+                <td>dfg</td>
+                <td>sd</td>
+            </tr>
+            <tr>
+                <td scope="row">1</td>
+                <td>abcd</td>
+                <td>7625120587</td>
+                <td>4</td>
+                <td>fgh234561</td>      
+                <td>student</td>
+                <td>sales</td>        
+                <td>6 AM</td>
+                <td>12 PM</td>
+                <td>acd</td>
+                <td>sdf</td>
+                <td>dfg</td>
+                <td>sd</td>
+            </tr>
+            <!-- Add more rows here if needed -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

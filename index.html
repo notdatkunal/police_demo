@@ -1,0 +1,667 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="description" content="CVIRMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="shortcut icon" href="images/cvirms_logo.png">
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+
+        /* Style the dropdown menu */
+.user-menu {
+    display: none; /* Hide the menu by default */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Style the menu items */
+.user-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Change the background color and text color on hover */
+.user-menu a:hover {
+    background-color: rgba(91, 172, 244, 0.8);
+    color: #fff;
+}
+
+/* Show the dropdown menu when the parent element is hovered */
+.dropdown:hover .user-menu {
+    display: block;
+}
+
+
+        /* Style for oval-shaped cards with a black shadow effect */
+        /* Style for oval-shaped cards with a black shadow effect */
+
+        .card {
+        border-radius: 30px 40px;
+        box-shadow: 0 1px 2px rgba(3, 0, 0, 0.648);
+        transition: transform 0.1s, box-shadow 0.3s;
+        border: 3px solid #989797;
+        margin-right: 3px; /* Adjust the margin to control the space between cards */
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    /* Define card sizes for different screen widths */
+    @media screen and (max-width: 767px) {
+        .card {
+            width: 100%; /* Full width for small screens */
+            height: auto;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        .card {
+            width: 240px;
+            height: auto;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .card {
+            width: 280px;
+            height: auto;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 31px 0 0 40px;
+        }
+    }
+
+    /* Card name styles */
+    .card-name {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+    }
+    
+    /* Rest of your existing CSS styles for card colors */
+    #Hotel{
+        background-color: rgba(249, 250, 250, 0.909);
+    }
+    
+    #Hostel {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    
+    #Chawl{
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    
+    #HomeStay{
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    
+    #UsedVehicle {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    
+    #LabourContractor {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    #Oraganization {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    #ScrapMerchant {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    #SmallIndustry{
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    #PetrolPump {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    #Other {
+        background-color: rgb(249, 250, 250, 0.909);
+    }
+    
+ 
+    #main-menu a {
+        color: black !important;
+    }
+
+    #language {
+    margin-top: 0; /* Remove top margin */
+    padding: 10px 0px; /* Adjust padding as needed */
+    }
+
+           
+        .stat-content .text-dark {
+            font-weight: bolder;
+            font-size: larger;
+            }
+
+        .dropdown-item {
+                transition: background-color 0.3s;
+            }
+
+         .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(232, 225, 20, 0.1);
+             }
+    
+         .dropdown-item:hover {
+                background-color: rgba(91, 172, 244, 0.8);
+            }
+
+           
+       
+        </style>
+
+   
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        function details(id){
+            console.log(id);
+            console.log("user is updated");
+            document.location='details.html'
+        }
+    </script> 
+</head>
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel" style="background-color: #bab6b6;"> <!-- Add this style attribute -->
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header" style="background-color: #bab6b6;" >
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/cvirms_logo.png" alt="Logo" width="130px">
+                </a>            
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse" style="background-color: #bab6b6;">
+                <ul class="nav navbar-nav" style="background-color: #bab6b6;">
+                    <li class="active">
+                        <a href="index.html" > <i class="menu-icon fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="search.html" > <i class="menu-icon fa fa-search" aria-hidden="true"></i>
+                            Visitor Search</a>
+                    </li>
+                
+            
+                    <li class="active">
+                        <a href="Addflag.html" >
+                            <i class="menu-icon fa fa-flag" aria-hidden="true" style="color: black;"></i>Add Flag
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Allflag.html" >
+                            <i class="menu-icon fa fa-flag-checkered" aria-hidden="true" style="color: black;"></i>All Flag
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Emergency.html" >
+                            <i class="menu-icon fa fa-exclamation" aria-hidden="true" aria-hidden="true" style="color: black;"></i>Emergency Alert
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="AddNoticee.html"style="color: black;">
+                            <i class="menu-icon fa fa-plus-square" aria-hidden="true" style="color: black;"></i>Add Notice
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="AllNotice.html" >
+                            <i class="menu-icon fa fa-book" aria-hidden="true" aria-hidden="true" style="color: black;"></i>All Notices
+                        </a>
+                    </li>
+            
+                    <li class="nav-item dropdown active"> <!-- Use the 'nav-item dropdown' class -->
+                        <a class="nav-link dropdown-toggle ml-auto" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                            <i class="menu-icon fa fa-language black-menu-icon" aria-hidden="true" aria-hidden="true" style="color: black;"></i> Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language">
+                            <a class="dropdown-item" href="#" >Hindi</a>
+                            <a class="dropdown-item" href="#" >English</a>
+                            <a class="dropdown-item" href="#" >Marathi</a>
+                            <a class="dropdown-item" href="#" >Kannada</a>
+                            <a class="dropdown-item" href="#" >Telugu</a>
+                            <a class="dropdown-item" href="#" >Malayalam</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header" style="background-color: #bab6b6;" >
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                       
+
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">5</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <i class="fa fa-check"></i>
+                                <p>Server #1 overloaded.</p>
+                            </a>
+                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                                <i class="fa fa-info"></i>
+                                <p>Server #2 overloaded.</p>
+                            </a>
+                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                                <i class="fa fa-warning"></i>
+                                <p>Server #3 overloaded.</p>
+                             </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="dropdown">
+                            <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
+                                <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                                <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="language-select">
+                        <a id="profile" aria-haspopup="true" aria-expanded="true">
+                            <p style="color: black;">Profile</p>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Police Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid">
+         <!-- First Row - Group of Four Cards -->
+         <div class="row">
+            <div class="col-md-3 mb-3">
+                <a href="hotel.html">
+                    <div class="card" id="Hotel">
+                        <div class="row">
+                            <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                <img src="images/hotelss.jpg" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 38px; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <div class="stat-widget-one" >
+                                        <div class="stat-content dib">
+                                            <div class="text-dark">Hotel</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                
+                <!-- Second Card - Hostel -->
+                <div class="col-md-3 mb-3">
+                    <a href="Hostel.html">
+                        <div class="card" id="Hostel">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/hostels.jpg" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Hostel</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Third Card - Chawl -->
+                <div class="col-md-3 mb-3">
+                    <a href="chawl.html">
+                        <div class="card" id="Chawl">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/homestay.png" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Chawl</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Fourth Card - HomeStay -->
+                <div class="col-md-3 mb-3">
+                    <a href="HomeStay.html">
+                        <div class="card" id="HomeStay">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/chawl.jpg" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">HomeStay</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                </div> <!-- End of First Row -->
+        
+            <!-- Second Row - Group of Four Cards -->
+            <div class="row">
+                <!-- Fifth Card - UsedVehicle -->
+                <div class="col-md-3 mb-3">
+                    <a href="usedvehicle.html">
+                        <div class="card" id="UsedVehicle">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/cars.jpg" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">UsedVehicle</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Sixth Card - Labour Contractor -->
+                <div class="col-md-3 mb-3">
+                    <a href="Labour.html">
+                        <div class="card" id="LabourContractor">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/labour.png" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 39px; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Labour</div>
+                                                <div class="text-dark">Contractor</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Seventh Card - Organization -->
+                <div class="col-md-3 mb-3">
+                    <a href="organization.html">
+                        <div class="card" id="Organization">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/org.png" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 95%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Organization</div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Eighth Card - Scrap Merchant -->
+                <div class="col-md-3 mb-3">
+                    <a href="Scrapmerchant.html">
+                        <div class="card" id="ScrapMerchant">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/scrap.jpg" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 37px; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Scrap</div>
+                                                <div class="text-dark">Merchant</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div> <!-- End of Second Row -->
+            </div>
+            <!-- Third Row - Group of Four Cards -->
+            <div class="row">
+                <!-- Ninth Card - Small Industry -->
+                <div class="col-md-3 mb-3">
+                    <a href="Smallindustry.html">
+                        <div class="card" id="SmallIndustry">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/industry.png" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 97%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Small Industry</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Tenth Card - Petrol Pump -->
+                <div class="col-md-3 mb-3">
+                    <a href="Petrol.html">
+                        <div class="card" id="PetrolPump">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/petrol.jpg" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 97%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Petrol Pump</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Eleventh Card - Foregin Visitor -->
+                <div class="col-md-3 mb-3">
+                    <a href="foreignerview.html">
+                        <div class="card" id="Foregin">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/Foreign.png" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 42px; height: 102%; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Foreign</div>
+                                                <div class="text-dark">Visitor</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+                </div>
+                <!-- Twelveth Card - Construction -->
+                <div class="col-md-3 mb-3">
+                    <a href="Support.html">
+                        <div class="card" id="Other">
+                            <div class="row">
+                                <div class="col-md-6" style="padding: 40; margin-right: -50px;">
+                                    <img src="images/other.png" class="card-img-top" alt="Hotel Logo" style="border-radius: 31px 0 0 40px; height: 100% ; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div class="stat-widget-one" >
+                                            <div class="stat-content dib">
+                                                <div class="text-dark">Support</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> <!-- End of Third Row -->
+        </div> <!-- End of container-fluid -->
+    
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>

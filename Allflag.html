@@ -1,0 +1,486 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="description" content="CVIRMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="shortcut icon" href="images/cvirms_logo.png">
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+
+        /* Style the dropdown menu */
+.user-menu {
+    display: none; /* Hide the menu by default */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Style the menu items */
+.user-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Change the background color and text color on hover */
+.user-menu a:hover {
+    background-color: rgba(91, 172, 244, 0.8);
+    color: #fff;
+}
+
+/* Show the dropdown menu when the parent element is hovered */
+.dropdown:hover .user-menu {
+    display: block;
+}
+
+
+        /* Style for oval-shaped cards with a black shadow effect */
+        /* Style for oval-shaped cards with a black shadow effect */
+    /* Custom styles */
+    body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 70%;
+            margin: 70px auto; /* Center the container horizontally */
+           margin-top: 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(26, 25, 25, 0.1);
+            opacity: 0;
+            animation: fade-in 1s forwards;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .breadcrumbs {
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs h5 {
+            margin: 0;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            background-color:#fbf7f7; ;
+            border-color: #333;
+            width: 100%;
+        }
+
+        .table {
+        background-color: white;
+        border-color: black;
+        width: 100%;
+        margin-left: 0px; /* Adjust the value as needed to shift the table to your desired position */
+        margin-right: 0;
+        border-collapse: collapse; /* Add this line to collapse table borders */
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid black; /* Add this line to set cell borders */
+        padding: 8px; /* Add some padding to cells for spacing */
+    }
+
+    .table thead th {
+        background-color: #757575;
+        color: white;
+    }
+
+
+        .h2 {
+            background-color: #757575;
+            padding: 10px;
+            color:white;
+        }
+
+        .search-form {
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="search"] {
+            width: 70%;
+        }
+
+        .search-form button[type="submit"] {
+            width: 30%;
+        }
+ 
+    #main-menu a {
+        color: black !important;
+    }
+
+    #language {
+    margin-top: 0; /* Remove top margin */
+    padding: 10px 0px; /* Adjust padding as needed */
+    }
+
+           
+        .stat-content .text-dark {
+            font-weight: bolder;
+            font-size: larger;
+            }
+
+        .dropdown-item {
+                transition: background-color 0.3s;
+            }
+
+        
+    
+         .dropdown-item:hover {
+                background-color: rgba(91, 172, 244, 0.8);
+            }
+
+           
+       
+        </style>
+
+   
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        function details(id){
+            console.log(id);
+            console.log("user is updated");
+            document.location='details.html'
+        }
+    </script> 
+</head>
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel" style="background-color: #bab6b6;"> <!-- Add this style attribute -->
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header" style="background-color: #bab6b6;" >
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/cvirms_logo.png" alt="Logo" width="130px">
+                </a>            
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse" style="background-color: #bab6b6;">
+                <ul class="nav navbar-nav" style="background-color: #bab6b6;">
+                    <li class="active">
+                        <a href="index.html" > <i class="menu-icon fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="search.html" > <i class="menu-icon fa fa-search" aria-hidden="true"></i>
+                            Visitor Search</a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Addflag.html" >
+                            <i class="menu-icon fa fa-flag" aria-hidden="true" style="color: black;"></i>Add Flag
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Allflag.html" >
+                            <i class="menu-icon fa fa-flag-checkered" aria-hidden="true" style="color: black;"></i>All Flag
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Emergency.html" >
+                            <i class="menu-icon fa fa-exclamation" aria-hidden="true" aria-hidden="true" style="color: black;"></i>Emergency Alert
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="AddNoticee.html"style="color: black;">
+                            <i class="menu-icon fa fa-plus-square" aria-hidden="true" style="color: black;"></i>Add Notice
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Allnotice.html" >
+                            <i class="menu-icon fa fa-book" aria-hidden="true" aria-hidden="true" style="color: black;"></i>All Notices
+                        </a>
+                    </li>
+            
+                    <li class="nav-item dropdown active"> <!-- Use the 'nav-item dropdown' class -->
+                        <a class="nav-link dropdown-toggle ml-auto" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                            <i class="menu-icon fa fa-language black-menu-icon" aria-hidden="true" aria-hidden="true" style="color: black;"></i> Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language">
+                            <a class="dropdown-item" href="#" >Hindi</a>
+                            <a class="dropdown-item" href="#" >English</a>
+                            <a class="dropdown-item" href="#" >Marathi</a>
+                            <a class="dropdown-item" href="#" >Kannada</a>
+                            <a class="dropdown-item" href="#" >Telugu</a>
+                            <a class="dropdown-item" href="#" >Malayalam</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header" style="background-color: #bab6b6;" >
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        
+                        <div class="form-inline">
+                                <input class="form-control mr-sm-2" type="button" value="Search ..." id="search-input">
+                                  <a href="forms/SearchBar.html"></a>
+                            
+                        </div>
+
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">5</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <i class="fa fa-check"></i>
+                                <p>Server #1 overloaded.</p>
+                            </a>
+                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                                <i class="fa fa-info"></i>
+                                <p>Server #2 overloaded.</p>
+                            </a>
+                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                                <i class="fa fa-warning"></i>
+                                <p>Server #3 overloaded.</p>
+                             </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="dropdown">
+                            <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
+                                <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                                <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="language-select">
+                        <a id="profile" aria-haspopup="true" aria-expanded="true">
+                            <p style="color: black;">Profile</p>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        
+            <h1 align="center" class="h1" style="background-color: #757575 ;color: #fff;">All Flag</h1>
+
+<div class="container">
+    <form>
+        <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Search..."  style="color:rgb(15, 14, 14);">
+            <button type="submit" class="btn btn-primary" style="background-color: #a39e9e;color:white; border-color: #333;">Search</button>
+        </div>
+    </form>
+
+    <table class="table" align="center" >
+        
+            <thead class=" text-white" >
+                <tr>
+                    <th scope="col">Basic Info</th>
+                    <th scope="col">Identity</th>
+                    <th scope="col">Remark</th>
+                    <th scope="col">Created By</th>
+                    <th scope="col">flag Alert</th>
+                    <th scope="col">Status</th> 
+                    </tr>
+      
+                    <tr>
+                      <td scope="col"> Name: Manaskumar Dhubacharan Jena </td>
+                      <td scope="col">Mob: 7584490346 
+                        <p> Adhar card: 485647328393</p>
+                        <p> Pan card: </p>
+                         <p>Driving Lic:</p>
+                         <p>Vehicle: </p>
+                        
+                      </td>
+                      <td scope="col">PS: Lonavala Reural<p> Created by: Shree Dipak Lukade | Mo.9826483586 </p>
+                      </td>
+                      <td scope="col"> Remark:</td>
+                      <td><a href="AllFlagAlert.html">
+                          <button type="button" style="background-color: #757575; color: #fff;">Alert:0</button>
+                         </a>
+                          <p><a href="">
+                               <button type="button" style="background-color: #757575; color: #fff;">Visitor History:1</button></p>
+                          </a>
+                              </td>
+                      <td><a href="">
+                          <button type="button" style="background-color: red; color: #fff;">Reopen</button>
+                          </a>
+                      </td>
+                      </tr>
+                
+              
+                  <tr>
+                    <td scope="col"> Name: Jena </td>
+                    <td scope="col">Mob: 7584490346 
+                      <p> Adhar card: 485647328393</p>
+                      <p> Pan card: </p>
+                       <p>Driving Lic:</p>
+                       <p>Vehicle: </p>
+                      </td>
+                    <td scope="col">PS: Lonavala Reural
+                      <p>Created by: Shree Dipak Lukade | Mo.9826483586</p>
+                    </td>
+                    <td scope="col"> Remark:</td>
+                    <td><a href="">
+                      <button type="button" style="background-color: #757575; color: #fff;">Alert: 19</button></a>
+                      <a href="">
+                      <p><button type="button" style="background-color: #757575; color: #fff;">Visitor History: 29</button></p></a>
+                  </td>
+                    <td><a href="">
+                      <button type="button"  style="background-color: red; color: #fff;">Reopen</button></td></a>
+                    </tr>
+              
+                    <tr>
+                      <td scope="col"> Name: Dhubacharan Jena </td>
+                      <td scope="col">Mob: 7584490346 
+                          <p> Adhar card: 485647328393</p>
+                          <p> Pan card: </p>
+                           <p>Driving Lic:</p>
+                           <p>Vehicle: </p>
+                          </td>
+                      <td scope="col">PS: Lonavala Reural
+                       <p> Created by: Shree Dipak Lukade | Mo.9826483586</p>
+                      </td>
+                      <td scope="col"> Remark:</td>
+                      <td><a href="">
+                          <button type="button" style="background-color: #757575; color: #fff;">Alert: 0</button></a>
+                          <a href="">
+                          <p> <button type="button" style="background-color: #757575; color: #fff;">Visitor History: 29</button></p>
+                          </a></td>
+                      <td><a href="">
+                          <button type="button" style="background-color: red; color: #fff;">Reopen</button></td></a>
+                      </tr>
+      
+                      <tr>
+                          <td scope="col"> Name: chalukya </td>
+                          <td scope="col">Mob: 7584490346 
+                              <p> Adhar card: 485647328393</p>
+                              <p> Pan card: </p>
+                               <p>Driving Lic:</p>
+                               <p>Vehicle: </p>
+                              </td>
+                          <td scope="col">PS: Lonavala Reural
+                           <p>Created by: Shree Dipak Lukade | Mo.9826483586</p>
+                          </td>
+                          <td scope="col"> Remark:</td>
+                          <td><a href="">
+                              <button type="button" style="background-color: #757575; color: #fff;">Alert: 2</button></a>
+                              <a href="">
+                              <p><button type="button" style="background-color: #757575; color: #fff;">Visitor History: 15</button></p>
+                              </a></td>
+                          <td><a href="">
+                              <button type="button" style="background-color: rgb(0, 225, 255); color: #fff;">Close</button>
+                              </a>     
+                          </td>
+                          </tr>
+                <!-- Add more rows here if needed -->
+            </tbody>
+        </table>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>

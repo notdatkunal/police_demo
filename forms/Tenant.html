@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style type="text/css">    
+       
+      .f2 {
+          font-weight: bolder;              
+          font-size: 20px;
+          border-width: 5px;
+          width: 30%;
+          margin-bottom: 10px;
+      }
+      .l1
+      {
+          font-weight: bolder;
+      }
+      .f3
+      {
+          width: 50%;
+      }
+  </style>
+      }
+  </style>
+
+  <title>Tenant Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">Tenant Form</h1>
+    <form>
+      <fieldset class="border p-4">
+          <legend class="l1">Name of Visitor:</legend>
+          <div class="form-row">
+              <div class="col-md-2 form-group">
+                  <label class="l1">Title:</label>
+                  <select name="title" class="form-control">
+                      <option value="Mr.">Mr.</option>
+                      <option value="Mrs.">Mrs.</option>
+                      <option value="Miss">Miss</option>
+                  </select>
+              </div>
+            <div class="col-md-3 form-group">
+                <label class="l1">First Name:</label>
+                <input type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-md-3 form-group">
+                <label class="l1">Middle Name:</label>
+                <input type="text" class="form-control" placeholder="Middle Name">
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="l1">Last Name:</label>
+                <input type="text" class="form-control" placeholder="Last Name">
+            </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-2 form-group">
+                    <label class="l1">Gender:</label>
+                    <select name="title" class="form-control">
+                        <option value="Mr.">Male</option>
+                        <option value="Mrs.">Female</option>
+                        <option value="Miss">Other</option>
+                    </select>
+                </div>
+              </div>
+          
+        <fieldset class="f2">
+          <div class="form-group">
+              <label class="f1">Contact Number:</label>
+              <input type="tel" class="form-control" placeholder="Contact Number">
+          </div>
+          <div class="form-group">
+              <label class="f1">Alternate Number:</label>
+              <input type="tel" class="form-control" placeholder="Alternate Number">
+          </div>
+          <div class="form-group">
+              <label class="f1">Address:</label>
+              <input type="text" class="form-control" placeholder="Address">
+          </div>
+          <div class="form-group">
+              <label class="f1">Pincode:</label>
+              <input type="text" class="form-control" placeholder="Pincode">
+          </div>
+          <div class="form-group">
+              <label class="f1">Area / Location:</label>
+              <input type="text" class="form-control" placeholder="Area / Location">
+          </div>
+
+          <div class="form-group">
+            <label class="f1">City:</label>
+            <input type="text" class="form-control" placeholder="City">
+        </div>
+
+        <div class="form-group">
+            <label class="f1">Taluka:</label>
+            <select name="taluka" id="taluka">
+              <option value="Mulshi">Mulshi</option>
+              <option value="Hoskote">Hoskote</option>
+              <option value="Dharur">Dharur</option>
+              <option value="Sangola">Sangola</option>
+              </select>          
+        </div>
+
+        <div class="form-group">
+            <label class="f1">District:</label>
+            <select name="dist" id="dist">
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="New Delhi">Bangalore</option>
+              <option value="Faridabad">Visakhapatnam</option>
+              <option value="Udaipur">Udaipur</option>
+              </select>          
+        </div>  
+
+        <div class="form-group">
+            <label class="f1">State:</label>
+            <select name="state" id="state">
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Andra Pradesh">Andra Pradesh</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Rajasthan">Rajasthan</option>
+              </select>          
+            </div>
+        
+          <div class="form-group">
+            <label class="f1">Vehicle Details:</label>
+            <input type="checkbox">
+            </div>
+        <div>
+        <label clss="vehicle_no">Vehicle No:</label>
+        <input type="text" class="form-control" placeholder="vehicle_no">
+        </div>
+        <div clss="form-group">
+          <label class="f1">Type of vehicle:</label>
+          <select name="Type of vehicle" class="form-control">
+            <option value="Own">Own</option>
+            <option value=""></option>
+          </select>
+          </div>
+        
+      <div class="form-group">
+          <label class="f1">Name of Document:</label>
+          <select name="title" class="form-control">
+              <option value="Aadhar card">Aadhar card</option>
+              <option value="Pan card">Pan card</option>
+              <option value="Voters Card">Voters Card</option>
+              <option value="DL">DL</option>
+              <option value="Other">Other</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label class="f1"> Document Id Number:</label>
+          <input type="text" class="form-control" placeholder="Documents_Id">
+      </div>
+      <div class="form-group">
+          <label class="f1">Upload Documents Image:</label>
+          <input type="file" class="form-control-file">
+      </div>
+      <div class="form-group">
+          <label class="f1">OTP for Sign Verification:</label>
+         <input type="checkbox">
+      </div>
+          
+          <div class="form-group">
+            <label class="f1">Staying as:</label>
+            <select name="title" class="form-control">
+                <option value="Adult">Adult</option>
+                <option value="Children">Children</option>
+          </select></div>
+          <div class="form-group">
+            <label class="f1">Staying For:</label>
+            <select name="title" class="form-control">
+                <option value="Student">Student</option>
+                <option value="Employee">Employee</option>
+                <option value="Self Employeed">Self Employeed</option>
+                <option value="Temporary">Temporary</option>"
+            </select>
+        </div>
+        <div class="form-group">
+          <label class="f1">Name of Organisation:</label>
+          <input type="text" class="form-control">
+      </div>
+        <div class="form-group">
+            <label class="f1"> Work ID Card:</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="">Reference:</label>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label class="f3">Name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="f3">Number:</label>
+                    <input type="tel" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="">Reference:</label>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <label class="f3">Name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="f3">Number:</label>
+                    <input type="tel" class="form-control">
+                </div>
+            </div>
+        </div>
+        </fieldset>
+<div class="text-center">
+            <input type="submit" name="SUBMIT" class="btn btn-primary" value="Submit">
+        </div>
+    </fieldset>
+</form>
+</div>
+</body>
+</html>

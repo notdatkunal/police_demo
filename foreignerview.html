@@ -1,0 +1,473 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="description" content="CVIRMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="shortcut icon" href="images/cvirms_logo.png">
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+
+        /* Style the dropdown menu */
+.user-menu {
+    display: none; /* Hide the menu by default */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust the padding as needed */
+  background-color: #757575; /* Change the background color to your preference */
+  color: #ffffff; /* Change the text color to your preference */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners for the button */
+  border: none; /* Remove the button border */
+}
+/* Style the menu items */
+.user-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Change the background color and text color on hover */
+.user-menu a:hover {
+    background-color: rgba(91, 172, 244, 0.8);
+    color: #fff;
+}
+
+/* Show the dropdown menu when the parent element is hovered */
+.dropdown:hover .user-menu {
+    display: block;
+}
+
+
+        /* Style for oval-shaped cards with a black shadow effect */
+        /* Style for oval-shaped cards with a black shadow effect */
+    /* Custom styles */
+    body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 70%;
+            margin: 70px auto; /* Center the container horizontally */
+           margin-top: 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(26, 25, 25, 0.1);
+            opacity: 0;
+            animation: fade-in 1s forwards;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .breadcrumbs {
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs h5 {
+            margin: 0;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            background-color:#757575; ;
+            border-color: #333;
+            width: 100%;
+        }
+
+        
+
+.table {
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Add a border-radius to make the table curved */
+    overflow: hidden; /* Hide overflow content to keep the curved corners */
+    box-shadow: 0 2px 4px rgba(26, 25, 25, 0.1);
+    margin: 0 auto; /* Center the table horizontally */
+    margin-left: -100px;
+}
+
+/* Style for table header */
+.table thead th {
+    background-color: #a49e9e;
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for table rows */
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for table cells */
+.table th, .table td {
+    border: none; /* Remove cell borders */
+    padding: 8px;
+}
+
+
+
+/* Hover effect on table rows */
+.table tbody tr:hover {
+    background-color:rgb(240, 240, 240);
+}
+        .h1 {
+            background-color: #a49e9e;
+            padding: 10px;
+            color:white;
+        }
+
+        .search-form {
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="search"] {
+            width: 70%;
+        }
+
+        .search-form button[type="submit"] {
+            width: 30%;
+        }
+ 
+    #main-menu a {
+        color: black !important;
+    }
+
+    #language {
+    margin-top: 0; /* Remove top margin */
+    padding: 10px 0px; /* Adjust padding as needed */
+    }
+
+           
+        .stat-content .text-dark {
+            font-weight: bolder;
+            font-size: larger;
+            }
+
+        .dropdown-item {
+                transition: background-color 0.3s;
+            }
+
+        
+    
+         .dropdown-item:hover {
+                background-color: rgba(91, 172, 244, 0.8);
+            }
+
+           
+       
+        </style>
+
+   
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        function details(id){
+            console.log(id);
+            console.log("user is updated");
+            document.location='details.html'
+        }
+    </script> 
+</head>
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel" style="background-color: #bab6b6;"> <!-- Add this style attribute -->
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header" style="background-color: #bab6b6;" >
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/cvirms_logo.png" alt="Logo" width="130px">
+                </a>            
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse" style="background-color: #bab6b6;">
+                <ul class="nav navbar-nav" style="background-color: #bab6b6;">
+                    <li class="active">
+                        <a href="index.html" > <i class="menu-icon fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="search.html" > <i class="menu-icon fa fa-search" aria-hidden="true"></i>
+                            Visitor Search</a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Addflag.html" >
+                            <i class="menu-icon fa fa-flag" aria-hidden="true" style="color: black;"></i>Add Flag
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Allflag.html" >
+                            <i class="menu-icon fa fa-flag-checkered" aria-hidden="true" style="color: black;"></i>All Flag
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Emergency.html" >
+                            <i class="menu-icon fa fa-exclamation" aria-hidden="true" aria-hidden="true" style="color: black;"></i>Emergency Alert
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="AddNoticee.html"style="color: black;">
+                            <i class="menu-icon fa fa-plus-square" aria-hidden="true" style="color: black;"></i>Add Notice
+                        </a>
+                    </li>
+            
+                    <li class="active">
+                        <a href="Allnotice.html" >
+                            <i class="menu-icon fa fa-book" aria-hidden="true" aria-hidden="true" style="color: black;"></i>All Notices
+                        </a>
+                    </li>
+            
+                    <li class="nav-item dropdown active"> <!-- Use the 'nav-item dropdown' class -->
+                        <a class="nav-link dropdown-toggle ml-auto" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                            <i class="menu-icon fa fa-language black-menu-icon" aria-hidden="true" aria-hidden="true" style="color: black;"></i> Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language">
+                            <a class="dropdown-item" href="#" >Hindi</a>
+                            <a class="dropdown-item" href="#" >English</a>
+                            <a class="dropdown-item" href="#" >Marathi</a>
+                            <a class="dropdown-item" href="#" >Kannada</a>
+                            <a class="dropdown-item" href="#" >Telugu</a>
+                            <a class="dropdown-item" href="#" >Malayalam</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header" style="background-color: #bab6b6;" >
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        
+                        <div class="form-inline">
+                                <input class="form-control mr-sm-2" type="button" value="Search ..." id="search-input">
+                                  <a href="forms/SearchBar.html"></a>
+                            
+                        </div>
+
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">5</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <i class="fa fa-check"></i>
+                                <p>Server #1 overloaded.</p>
+                            </a>
+                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                                <i class="fa fa-info"></i>
+                                <p>Server #2 overloaded.</p>
+                            </a>
+                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                                <i class="fa fa-warning"></i>
+                                <p>Server #3 overloaded.</p>
+                             </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="dropdown">
+                            <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                                <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
+                                <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                                <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="language-select">
+                        <a id="profile" aria-haspopup="true" aria-expanded="true">
+                            <p style="color: black;">Profile</p>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        
+<h1 align="center" class="h1">Foreign Visitor</h1>
+
+<div class="container">
+    <form>
+        <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Search...">
+            <button type="submit" class="btn btn-primary" style="background-color: #757575;color: white; border-color: #333;">Search</button>
+        </div>
+    </form>
+
+    <table class="table">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact No</th>
+                <th scope="col">Profile Photo</th>
+                <th scope="col">Staying At</th>
+                <th scope="col">Check In</th>
+                <th scope="col">Check Out</th>
+                <th scope="col">Passport</th>
+                <th scope="col">Visa Validity.......</th>
+                <th scope="col">Police Station</th>
+                <th scope="col">SDPO division</th>
+                <th scope="col">Ad SP/DCP</th>
+                <th scope="col">SP/CP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">01-09-2023</td>
+                <td>John</td>
+                <td>7625120587</td>
+                <td>
+                    <a href="images/admin.jpg" target="_blank" rel="noopener noreferrer">
+                        <img src="images/admin.jpg" alt="Description of the photo">
+                    </a>
+                </td>
+                <td>Hotel</td>
+                <td>1:00pm</td>
+                <td>5:00pm</td>
+                <td>pic.jpg</td>
+                <td>
+                    <ul><b>From:</b> 28-08-2023</ul>
+                    <ul><b>To :</b> 29-08-2023</ul>
+                </td>
+                <td>Wakad</td>
+                <td>acd</td>
+                <td>ede</td>
+                <td>xyy/dcv</td>
+            </tr>
+            <tr>
+                <td scope="row">01-09-2023</td>
+                <td>John</td>
+                <td>7625120587</td>
+                <td>
+                    <a href="images/admin.jpg" target="_blank" rel="noopener noreferrer">
+                        <img src="images/admin.jpg" alt="Description of the photo">
+                    </a>
+                </td>
+                <td>Hotel</td>
+                <td>1:00pm</td>
+                <td>5:00pm</td>
+                <td>pic.jpg</td>
+                <td>
+                    <ul><b>From:</b> 28-08-2023</ul>
+                    <ul><b>To :</b> 29-08-2023</ul>
+                </td>
+                <td>Wakad</td>
+                <td>acd</td>
+                <td>ede</td>
+                <td>xyy/dcv</td>
+            </tr>
+            
+            <!-- Add more rows here if needed -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>
